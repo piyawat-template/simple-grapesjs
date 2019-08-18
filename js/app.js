@@ -14,18 +14,58 @@ var editor = grapesjs.init({
     },
     'grapesjs-blocks-bootstrap4': {
       blocks: {
-        // ...
+        default: true,
+        text: true,
+        link: true,
+        image: true,
+        // LAYOUT
+        container: true,
+        row: true,
+        column: true,
+        column_break: true,
+        media_object: true,
+        // COMPONENTS
+        alert: true,
+        tabs: true,
+        badge: true,
+        button: true,
+        button_group: true,
+        button_toolbar: true,
+        card: true,
+        card_container: true,
+        collapse: true,
+        dropdown: true,
+        // TYPOGRAPHY
+        header: true,
+        paragraph: true,
+        // BASIC
+        list: true,
+        // FORMS
+        form: true,
+        input: true,
+        form_group_input: true,
+        input_group: true,
+        textarea: true,
+        select: true,
+        label: true,
+        checkbox: true,
+        radio: true,
       },
       blockCategories: {
-        // ...
+        'layout': true,
+        'components': true,
+        'typography': true,
+        'basic': true,
+        'forms': true,
       },
       labels: {
         // ...
-      }
+      },
     }
   },
   canvas: {
     styles: [
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css',
       'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
     ],
     scripts: [
@@ -47,9 +87,9 @@ editor.StyleManager.addProperty('decorations', {
 var blockManager = editor.BlockManager;
 blockManager.add('section', {
   label: 'Section',
-  category: "Layout",
+  category: "Template",
   attributes: {
-    class: "gjs-block fa fa-slideshare",
+    class: "fa fa-slideshare",
   },
   content: `<section style="
                 min-height: 500px;
