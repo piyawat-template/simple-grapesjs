@@ -21,18 +21,17 @@ var editor = grapesjs.init({
       },
       labels: {
         // ...
-      },
-      // ...
+      }
     }
   },
   canvas: {
     styles: [
-      'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
+      'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
     ],
     scripts: [
-      'https://code.jquery.com/jquery-3.3.1.slim.min.js',
-      'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js',
-      'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
+      'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',
+      'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'
     ],
   }
 })
@@ -42,4 +41,19 @@ editor.StyleManager.addProperty('decorations', {
   property: 'background-image',
   type: 'gradient',
   defaults: 'none'
+})
+
+// Cutom block
+var blockManager = editor.BlockManager;
+blockManager.add('section', {
+  label: 'Section',
+  category: "Layout",
+  attributes: {
+    class: "gjs-block fa fa-slideshare",
+  },
+  content: `<section style="
+                min-height: 500px;
+                background-image: linear-gradient(90deg, rgb(0, 255, 205) 1%, rgb(227, 162, 220) 99%)">
+      <h1 style="font-size: 3rem">Gradient</h1>
+  </section>`,
 })

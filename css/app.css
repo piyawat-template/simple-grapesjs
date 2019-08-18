@@ -3,6 +3,12 @@ html {
   height: 100%;
   margin: 0;
 }
+
+#gjs {
+  height:0px;
+  overflow:hidden;
+}
+
 .gjs-sm-sector .gjs-sm-gradient {
   width: 100%;
 }
